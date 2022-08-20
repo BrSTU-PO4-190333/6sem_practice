@@ -6,3 +6,6 @@ back:
 
 init-db:
 	make -C backend init-db
+
+front:
+	make -C frontend front

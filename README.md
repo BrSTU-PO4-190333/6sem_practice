@@ -4,6 +4,7 @@
 
 - [How to run app](#how-to-run-app)
 - [Application stack](#application-stack)
+- [Project tree](#project-tree)
 - [Folder structure](#folder-structure)
 
 ## How to run app
@@ -32,8 +33,10 @@ make back
 - [VS Code Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - [VS Code Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
 - [VS Code Database Client](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-database-client2)
+- [VS Code Reactjs code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.ReactSnippets)
+- [VS Code ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
-## Folder structure
+## Project tree
 
 ```bash
 tree --charset ascii -I "node_modules|docker"
@@ -90,7 +93,87 @@ tree --charset ascii -I "node_modules|docker"
 |       `-- seeders
 |           |-- 20220819205613-RB_User.js
 |           `-- 20220819210116-TP_Task.js
+|-- frontend
+|   |-- Makefile
+|   |-- package-lock.json
+|   |-- package.json
+|   |-- public
+|   |   |-- favicon.ico
+|   |   |-- index.html
+|   |   |-- logo192.png
+|   |   |-- logo512.png
+|   |   |-- manifest.json
+|   |   `-- robots.txt
+|   `-- src
+|       |-- App.jsx
+|       |-- components
+|       |   |-- Error404Page
+|       |   |   `-- Error404Page.jsx
+|       |   |-- HomePage
+|       |   |   `-- HomePage.jsx
+|       |   |-- SignForm
+|       |   |   |-- SignForm.jsx
+|       |   |   `-- SignForm.module.css
+|       |   |-- SignInPage
+|       |   |   `-- SignInPage.jsx
+|       |   `-- SignUpPage
+|       |       `-- SignUpPage.jsx
+|       |-- env
+|       |   |-- colors.css
+|       |   |-- font.css
+|       |   `-- index.css
+|       |-- index.js
+|       `-- scripts
+|           |-- PasswordController
+|           |   |-- PasswordController.js
+|           |   |-- PasswordController.passwordHasDownLetters.test.js
+|           |   |-- PasswordController.passwordHasLanguageSymbols.test.js
+|           |   |-- PasswordController.passwordHasNumbers.test.js
+|           |   |-- PasswordController.passwordHasSpecialSymbols.test.js
+|           |   `-- PasswordController.passwordHasUpLetters.test.js
+|           |-- ToastController
+|           |   `-- ToastController.js
+|           `-- api
+|               `-- rest
+|                   |-- auth_signin_post.js
+|                   `-- auth_signup_post.js
 `-- report
 
-9 directories, 41 files
+24 directories, 70 files
+```
+
+## Folder structure
+
+```bash
+tree --charset ascii -I "node_modules|docker" -d
+```
+
+```
+.
+|-- backend
+|   `-- src
+|       |-- config
+|       |-- migrations
+|       |-- models
+|       |-- routes
+|       |-- scripts
+|       `-- seeders
+|-- frontend
+|   |-- public
+|   `-- src
+|       |-- components
+|       |   |-- Error404Page
+|       |   |-- HomePage
+|       |   |-- SignForm
+|       |   |-- SignInPage
+|       |   `-- SignUpPage
+|       |-- env
+|       `-- scripts
+|           |-- PasswordController
+|           |-- ToastController
+|           `-- api
+|               `-- rest
+`-- report
+
+24 directories
 ```
