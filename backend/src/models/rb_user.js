@@ -15,6 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   RB_User.init(
     {
       Name: DataTypes.STRING,
+      Email: DataTypes.STRING,
       Login: DataTypes.STRING,
       HashPassword: DataTypes.STRING,
     },

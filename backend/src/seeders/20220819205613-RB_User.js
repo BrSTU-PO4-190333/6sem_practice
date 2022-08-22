@@ -18,6 +18,7 @@ module.exports = {
     await queryInterface.bulkInsert('RB_Users', [
       {
         Name: 'Тестовый аккаунт',
+        Email: 'dewayne.wehner@ethereal.email',
         Login: 'test',
         HashPassword: bcrypt.hashSync('test', 7),
         createdAt: new Date(),
@@ -25,6 +26,7 @@ module.exports = {
       },
       {
         Name: 'Второй тестовый аккаунт',
+        Email: 'theodora.turcotte@ethereal.email',
         Login: 'test2',
         HashPassword: bcrypt.hashSync('test2', 7),
         createdAt: new Date(),
