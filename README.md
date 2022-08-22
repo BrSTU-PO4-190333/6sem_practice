@@ -111,26 +111,18 @@ tree --charset ascii -I "node_modules|docker"
 |       |   |   `-- Error404Page.jsx
 |       |   |-- HomePage
 |       |   |   `-- HomePage.jsx
-|       |   |-- SignForm
-|       |   |   |-- SignForm.jsx
-|       |   |   `-- SignForm.module.css
-|       |   |-- SignInPage
-|       |   |   `-- SignInPage.jsx
-|       |   `-- SignUpPage
-|       |       `-- SignUpPage.jsx
+|       |   `-- Sign
+|       |       |-- Sign.module.css
+|       |       |-- SignInPage
+|       |       |   `-- SignInPage.jsx
+|       |       `-- SignUpPage
+|       |           `-- SignUpPage.jsx
 |       |-- env
 |       |   |-- colors.css
 |       |   |-- font.css
 |       |   `-- index.css
 |       |-- index.js
 |       `-- scripts
-|           |-- PasswordController
-|           |   |-- PasswordController.js
-|           |   |-- PasswordController.passwordHasDownLetters.test.js
-|           |   |-- PasswordController.passwordHasLanguageSymbols.test.js
-|           |   |-- PasswordController.passwordHasNumbers.test.js
-|           |   |-- PasswordController.passwordHasSpecialSymbols.test.js
-|           |   `-- PasswordController.passwordHasUpLetters.test.js
 |           |-- ToastController
 |           |   `-- ToastController.js
 |           `-- api
@@ -139,7 +131,7 @@ tree --charset ascii -I "node_modules|docker"
 |                   `-- auth_signup_post.js
 `-- report
 
-24 directories, 70 files
+23 directories, 63 files
 ```
 
 ## Folder structure
