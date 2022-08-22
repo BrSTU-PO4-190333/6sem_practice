@@ -50,12 +50,11 @@ router.post(
 
     check('Password', 'Field "Password" not string').isString(),
     check('Password', 'Field "Password" is empty').notEmpty(),
-    check('Password', 'Password length c [4;64]').isLength({ min: 4, max: 64 }),
   ],
   MiddlewareTypeCheck,
   async (req, res) => {
     try {
-      const { Name, Login, Password } = req.body;
+      const { Name, Email, Login, Password } = req.body;
 
       const candidat = await RB_User.findOne({
         where: { Login },
@@ -67,6 +66,7 @@ router.post(
 
       await RB_User.create({
         Name,
+        Email,
         Login,
         HashPassword: bcrypt.hashSync(Password, 7),
       });

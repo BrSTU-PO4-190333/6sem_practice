@@ -1,0 +1,71 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form_wrapper {
+  border: 1px solid #e5e5e5;
+  width: calc(400px - 32px * 2);
+  padding: 32px;
+  border-radius: 8px;
+}
+
+.form_wrapper h2 {
+  color: var(--success-color);
+}
+
+/* = = = = = = = = input */
+.form_wrapper label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.form_wrapper input {
+  width: calc(100% - 0.75rem * 2 - 1px * 2);
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ced4da;
+  outline: none;
+}
+
+.form_wrapper input[attribute__is_correct='false'] {
+  border-color: var(--danger-color);
+}
+/* = = = = = = = = end input */
+
+/* = = = = = = = = link block */
+.form_wrapper .link_block {
+  margin-bottom: 1rem;
+}
+
+.form_wrapper .link_block a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+.form_wrapper .link_block a:hover {
+  text-decoration: none;
+  color: var(--link-hover-color);
+}
+/* = = = = = = = = end link block */
+
+/* = = = = = = = = buttons */
+.form_wrapper input[type='submit'] {
+  width: 100%;
+  margin-bottom: 0;
+
+  border-radius: 8px;
+  padding: 4px;
+  border: 1px solid var(--success-color);
+  color: white;
+  background-color: var(--success-color);
+}
+
+.form_wrapper input[type='submit']:hover {
+  color: var(--success-color);
+  background-color: transparent;
+}
+/* = = = = = = = = end buttons */

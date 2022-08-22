@@ -3,8 +3,8 @@ import React from 'react';
 import { Route, Routes } from 'react-router';
 
 import HomePage from './components/HomePage/HomePage';
-import SignInPage from './components/SignInPage/SignInPage';
-import SignUpPage from './components/SignUpPage/SignUpPage';
+import SignInPage from './components/Sign/SignInPage/SignInPage';
+import SignUpPage from './components/Sign/SignUpPage/SignUpPage';
 import Error404Page from './components/Error404Page/Error404Page';
 
 const routes = [

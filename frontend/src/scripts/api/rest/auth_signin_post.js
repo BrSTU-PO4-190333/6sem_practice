@@ -1,8 +1,9 @@
 import ToastController from '../../ToastController/ToastController';
 
 const URI = '/api/auth/sign-in/';
+const TITLE = 'Авторизация';
 
-export default async function ApiRestAuthSignIn(Login = '', Password = '') {
+export default async function ApiRestAuthSignIn(data = {}) {
   try {
     const url = `${process.env.REACT_APP__URL_BACKEND_SERVER}${URI}`;
     const response = await fetch(url, {
@@ -11,7 +12,7 @@ export default async function ApiRestAuthSignIn(Login = '', Password = '') {
         Accept: 'application/json',
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ Login, Password }),
+      body: JSON.stringify(data),
     });
 
     const status = response.status;
@@ -20,16 +21,13 @@ export default async function ApiRestAuthSignIn(Login = '', Password = '') {
     if (status === 200) {
       localStorage.setItem('AccessToken', json.AccessToken);
       localStorage.setItem('RefreshToken', json.RefreshToken);
-      ToastController.success('Авторизовались', URI);
+      ToastController.success('Авторизовались', TITLE);
       return true;
     }
 
     localStorage.removeItem('AccessToken');
     localStorage.removeItem('RefreshToken');
-    ToastController.warning(
-      `<pre>Не авторизовались\n${JSON.stringify(json, null, 2)}</pre>`,
-      URI
-    );
+    ToastController.warning(json.message, TITLE);
     return false;
   } catch (error) {
     ToastController.error('' + error, URI);
