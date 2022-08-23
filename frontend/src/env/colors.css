@@ -3,4 +3,11 @@
   --danger-color: #dc3545;
   --link-color: #0d6efd;
   --link-hover-color: #0a58ca;
+
+  --site-color: #ee6e3f;
+  --site-color-light: #f2926f;
+  --site-color-hover: rgb(238, 110, 63, 0.7);
+
+  --color-task-not-completed: #f1c95b;
+  --color-task-completed: #5cad6c;
 }

@@ -107,31 +107,97 @@ tree --charset ascii -I "node_modules|docker"
 |   `-- src
 |       |-- App.jsx
 |       |-- components
+|       |   |-- AppContainer
+|       |   |   |-- AppContainer.jsx
+|       |   |   `-- AppContainer.module.css
+|       |   |-- AppFrame
+|       |   |   |-- AppFrame.jsx
+|       |   |   `-- AppFrame.module.css
+|       |   |-- DatePage
+|       |   |   |-- DatePage.jsx
+|       |   |   |-- DatePage.module.css
+|       |   |   |-- PrintTime
+|       |   |   |   `-- PrintTime.jsx
+|       |   |   `-- PrintTimeLines
+|       |   |       `-- PrintTimeLines.jsx
 |       |   |-- Error404Page
 |       |   |   `-- Error404Page.jsx
 |       |   |-- HomePage
 |       |   |   `-- HomePage.jsx
-|       |   `-- Sign
-|       |       |-- Sign.module.css
-|       |       |-- SignInPage
-|       |       |   `-- SignInPage.jsx
-|       |       `-- SignUpPage
-|       |           `-- SignUpPage.jsx
+|       |   |-- LogoutPage
+|       |   |   `-- LogoutPage.jsx
+|       |   |-- MonthPage
+|       |   |   |-- MonthPage.jsx
+|       |   |   `-- MonthPage.module.css
+|       |   |-- Sign
+|       |   |   |-- Sign.module.css
+|       |   |   |-- SignInPage
+|       |   |   |   `-- SignInPage.jsx
+|       |   |   `-- SignUpPage
+|       |   |       `-- SignUpPage.jsx
+|       |   `-- YearPage
+|       |       |-- YearPage.jsx
+|       |       `-- YearPage.module.css
 |       |-- env
 |       |   |-- colors.css
 |       |   |-- font.css
 |       |   `-- index.css
 |       |-- index.js
+|       |-- package
+|       |   `-- DateController
+|       |       |-- DateController.js
+|       |       |-- getMonthDays
+|       |       |   |-- getMonthDays.js
+|       |       |   `-- getMonthDays.test.js
+|       |       |-- getNextDate
+|       |       |   |-- getNextDate.js
+|       |       |   `-- getNextDate.test.js
+|       |       |-- getNextMonth
+|       |       |   |-- getNextMonth.js
+|       |       |   `-- getNextMonth.test.js
+|       |       |-- getNextYear
+|       |       |   |-- getNextYear.js
+|       |       |   `-- getNextYear.test.js
+|       |       |-- getPrevDate
+|       |       |   |-- getPrevDate.js
+|       |       |   `-- getPrevDate.test.js
+|       |       |-- getPrevMonth
+|       |       |   |-- getPrevMonth.js
+|       |       |   `-- getPrevMonth.test.js
+|       |       |-- getPrevYear
+|       |       |   |-- getPrevYear.js
+|       |       |   `-- getPrevYear.test.js
+|       |       |-- getStringDay
+|       |       |   |-- getStringDay.js
+|       |       |   `-- getStringDay.test.js
+|       |       |-- getStringMonth
+|       |       |   |-- getStringMonth.js
+|       |       |   `-- getStringMonth.test.js
+|       |       `-- toStringTime
+|       |           |-- toStringTime.js
+|       |           `-- toStringTime.test.js
 |       `-- scripts
+|           |-- CalendarController
+|           |   |-- CalendarController.js
+|           |   |-- getDateTasks
+|           |   |   `-- getDateTasks.js
+|           |   |-- getDictTasks
+|           |   |   `-- getDictTasks.js
+|           |   |-- getMonthTasks
+|           |   |   `-- getMonthTasks.js
+|           |   `-- getYearTasks
+|           |       `-- getYearTasks.js
 |           |-- ToastController
 |           |   `-- ToastController.js
 |           `-- api
 |               `-- rest
+|                   |-- auth_access_token_put.js
 |                   |-- auth_signin_post.js
-|                   `-- auth_signup_post.js
+|                   |-- auth_signup_post.js
+|                   `-- tasks_get.js
 `-- report
 
-23 directories, 63 files
+48 directories, 104 files
 ```
 
 ## Folder structure
@@ -154,18 +220,42 @@ tree --charset ascii -I "node_modules|docker" -d
 |   |-- public
 |   `-- src
 |       |-- components
+|       |   |-- AppContainer
+|       |   |-- AppFrame
+|       |   |-- DatePage
+|       |   |   |-- PrintTime
+|       |   |   `-- PrintTimeLines
 |       |   |-- Error404Page
 |       |   |-- HomePage
-|       |   |-- SignForm
-|       |   |-- SignInPage
-|       |   `-- SignUpPage
+|       |   |-- LogoutPage
+|       |   |-- MonthPage
+|       |   |-- Sign
+|       |   |   |-- SignInPage
+|       |   |   `-- SignUpPage
+|       |   `-- YearPage
 |       |-- env
+|       |-- package
+|       |   `-- DateController
+|       |       |-- getMonthDays
+|       |       |-- getNextDate
+|       |       |-- getNextMonth
+|       |       |-- getNextYear
+|       |       |-- getPrevDate
+|       |       |-- getPrevMonth
+|       |       |-- getPrevYear
+|       |       |-- getStringDay
+|       |       |-- getStringMonth
+|       |       `-- toStringTime
 |       `-- scripts
-|           |-- PasswordController
+|           |-- CalendarController
+|           |   |-- getDateTasks
+|           |   |-- getDictTasks
+|           |   |-- getMonthTasks
+|           |   `-- getYearTasks
 |           |-- ToastController
 |           `-- api
 |               `-- rest
 `-- report
 
-24 directories
+48 directories
 ```

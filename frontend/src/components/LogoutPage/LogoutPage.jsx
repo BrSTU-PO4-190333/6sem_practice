@@ -3,16 +3,17 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router';
 
-const HomePage = (props) => {
+const LogoutPage = (props) => {
   let navigate = useNavigate();
 
   useEffect(() => {
-    navigate('/year/');
+    localStorage.removeItem('AccessToken');
+    navigate('/sign-in');
   }, [navigate]);
 
   return <div />;
 };
 
-HomePage.propTypes = {};
+LogoutPage.propTypes = {};
 
-export default HomePage;
+export default LogoutPage;

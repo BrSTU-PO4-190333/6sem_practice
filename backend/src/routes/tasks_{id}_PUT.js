@@ -56,6 +56,13 @@ router.put(
     try {
       const { id } = req.params;
       const { Name, Description, StartDate, EndDate, IsCompleted } = req.body;
+
+      if (new Date(EndDate).getTime() < new Date(StartDate).getTime()) {
+        return res.status(400).send({
+          message: 'EndDate < StartDate',
+        });
+      }
+
       const AccessToken = req.headers?.authorization?.split(' ')[1];
 
       const secret = appSettings.APP__JWT_SECRET;
