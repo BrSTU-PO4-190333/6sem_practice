@@ -18,14 +18,12 @@ const router = express.Router();
  *        '200':
  *          description: Получили новый access токен
  *          schema:
- *            type: array
- *            items:
- *              type: object
- *              properties:
- *                message:
- *                  type: string
- *                AccessToken:
- *                  type: string
+ *            type: object
+ *            properties:
+ *              message:
+ *                type: string
+ *              AccessToken:
+ *                type: string
  *        '401':
  *          description: Не авторизован refresh токен
  *          schema:
@@ -60,6 +58,7 @@ router.put(
         AccessToken,
       });
     } catch (error) {
+      console.log(error);
       res.status(500).json({ message: '' + error });
     }
   }

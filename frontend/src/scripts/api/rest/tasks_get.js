@@ -1,0 +1,38 @@
+import ToastController from '../../ToastController/ToastController';
+import ApiRestAccessTokenPut from './auth_access_token_put';
+
+const URI = '/api/tasks/';
+const TITLE = 'Таски';
+
+export default async function ApiRestTasksGet() {
+  try {
+    const url = `${process.env.REACT_APP__URL_BACKEND_SERVER}${URI}`;
+    const AccessToken = localStorage.getItem('AccessToken');
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        Authorization: `Bearer ${AccessToken}`,
+      },
+    });
+
+    const status = response.status;
+    const json = await response.json();
+
+    if (status === 200) {
+      ToastController.info('Получили таски', TITLE);
+      return json;
+    }
+
+    if (status === 401) {
+      const AccessTokenIsUpdated = await ApiRestAccessTokenPut();
+      if (!AccessTokenIsUpdated) return [];
+      return await ApiRestTasksGet();
+    }
+
+    ToastController.warning(json.message, TITLE);
+    return [];
+  } catch (error) {
+    ToastController.error('' + error, URI);
+    return [];
+  }
+}

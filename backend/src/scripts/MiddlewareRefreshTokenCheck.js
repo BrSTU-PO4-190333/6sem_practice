@@ -22,7 +22,7 @@ module.exports = async function MiddlewareRefreshTokenCheck(req, res, next) {
       payload = jwt.verify(RefreshToken, secret);
     } catch (error) {
       if (error instanceof jwt.TokenExpiredError) {
-        await TP_Access_token.destroy({ where: { AccessToken } });
+        await TP_Refresh_token.destroy({ where: { RefreshToken } });
         return res.status(401).json({ message: `Token expired ${error}` });
       }
       if (error instanceof jwt.JsonWebTokenError) {
