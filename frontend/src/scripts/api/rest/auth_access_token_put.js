@@ -27,7 +27,7 @@ export default async function ApiRestAccessTokenPut(data = {}) {
 
     if (status === 401) {
       localStorage.removeItem('AccessToken');
-      // localStorage.removeItem('RefreshToken');
+      localStorage.removeItem('RefreshToken');
       window.location.replace('/sign-in');
       return false;
     }

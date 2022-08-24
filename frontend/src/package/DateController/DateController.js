@@ -7,6 +7,7 @@ import getPrevMonth from './getPrevMonth/getPrevMonth';
 import getPrevYear from './getPrevYear/getPrevYear';
 import getStringDay from './getStringDay/getStringDay';
 import getStringMonth from './getStringMonth/getStringMonth';
+import toStringDate from './toStringDate/toStringDate';
 import toStringTime from './toStringTime/toStringTime';
 
 const DateController = {
@@ -19,6 +20,7 @@ const DateController = {
   getPrevYear,
   getStringDay,
   getStringMonth,
+  toStringDate,
   toStringTime,
 };
 

@@ -23,8 +23,9 @@ app.use('/api', require('./routes/auth_refresh-token_GET'));
 app.use('/api', require('./routes/auth_refresh-token_{id}_DELETE'));
 app.use('/api', require('./routes/auth_refresh-token_DELETE'));
 
-app.use('/api', require('./routes/tasks_GET'));
 app.use('/api', require('./routes/tasks_POST'));
+app.use('/api', require('./routes/tasks_GET'));
+app.use('/api', require('./routes/tasks_{id}_GET'));
 app.use('/api', require('./routes/tasks_{id}_DELETE'));
 app.use('/api', require('./routes/tasks_{id}_PUT'));
 
