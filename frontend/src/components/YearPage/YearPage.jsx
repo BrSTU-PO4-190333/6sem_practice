@@ -72,7 +72,6 @@ const YearPage = (props) => {
     >
       <ul className={styles.array_month}>
         {yearCalendar.map((month, month_i) => {
-          console.log(month);
           return (
             <li
               key={`${year}-${month_i + 1}`}

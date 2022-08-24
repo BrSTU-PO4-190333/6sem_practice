@@ -85,6 +85,7 @@ tree --charset ascii -I "node_modules|docker"
 |       |   |-- tasks_GET.js
 |       |   |-- tasks_POST.js
 |       |   |-- tasks_{id}_DELETE.js
+|       |   |-- tasks_{id}_GET.js
 |       |   `-- tasks_{id}_PUT.js
 |       |-- scripts
 |       |   |-- MiddlewareAccessTokenCheck.js
@@ -135,6 +136,13 @@ tree --charset ascii -I "node_modules|docker"
 |       |   |   |   `-- SignInPage.jsx
 |       |   |   `-- SignUpPage
 |       |   |       `-- SignUpPage.jsx
+|       |   |-- TasksPage
+|       |   |   |-- EditTask
+|       |   |   |   `-- EditTask.jsx
+|       |   |   |-- NewTask
+|       |   |   |   |-- NewTask.jsx
+|       |   |   |   `-- NewTask.module.css
+|       |   |   `-- TasksPage.jsx
 |       |   `-- YearPage
 |       |       |-- YearPage.jsx
 |       |       `-- YearPage.module.css
@@ -173,6 +181,9 @@ tree --charset ascii -I "node_modules|docker"
 |       |       |-- getStringMonth
 |       |       |   |-- getStringMonth.js
 |       |       |   `-- getStringMonth.test.js
+|       |       |-- toStringDate
+|       |       |   |-- toStringDate.js
+|       |       |   `-- toStringDate.test.js
 |       |       `-- toStringTime
 |       |           |-- toStringTime.js
 |       |           `-- toStringTime.test.js
@@ -194,10 +205,13 @@ tree --charset ascii -I "node_modules|docker"
 |                   |-- auth_access_token_put.js
 |                   |-- auth_signin_post.js
 |                   |-- auth_signup_post.js
-|                   `-- tasks_get.js
+|                   |-- tasks_get.js
+|                   |-- tasks_post.js
+|                   |-- tasks_{id}_get.js
+|                   `-- tasks_{id}_put.js
 `-- report
 
-48 directories, 104 files
+52 directories, 114 files
 ```
 
 ## Folder structure
@@ -232,6 +246,9 @@ tree --charset ascii -I "node_modules|docker" -d
 |       |   |-- Sign
 |       |   |   |-- SignInPage
 |       |   |   `-- SignUpPage
+|       |   |-- TasksPage
+|       |   |   |-- EditTask
+|       |   |   `-- NewTask
 |       |   `-- YearPage
 |       |-- env
 |       |-- package
@@ -245,6 +262,7 @@ tree --charset ascii -I "node_modules|docker" -d
 |       |       |-- getPrevYear
 |       |       |-- getStringDay
 |       |       |-- getStringMonth
+|       |       |-- toStringDate
 |       |       `-- toStringTime
 |       `-- scripts
 |           |-- CalendarController
@@ -257,5 +275,5 @@ tree --charset ascii -I "node_modules|docker" -d
 |               `-- rest
 `-- report
 
-48 directories
+52 directories
 ```

@@ -9,6 +9,7 @@ import LogoutPage from './components/LogoutPage/LogoutPage';
 import YearPage from './components/YearPage/YearPage';
 import MonthPage from './components/MonthPage/MonthPage';
 import DatePage from './components/DatePage/DatePage';
+import TasksPage from './components/TasksPage/TasksPage';
 import Error404Page from './components/Error404Page/Error404Page';
 
 const routes = [
@@ -51,6 +52,14 @@ const routes = [
   {
     path: '/year/:year/month/:month/date/:date',
     element: <DatePage />,
+  },
+  {
+    path: '/tasks',
+    element: <TasksPage />,
+  },
+  {
+    path: '/tasks/:id',
+    element: <TasksPage />,
   },
   {
     path: '*',

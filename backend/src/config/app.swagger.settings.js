@@ -71,8 +71,9 @@ const swaggerSettings = {
     'src/routes/auth_refresh-token_DELETE.js',
 
     'src/models/tp_task.js',
-    'src/routes/tasks_GET.js',
     'src/routes/tasks_POST.js',
+    'src/routes/tasks_GET.js',
+    'src/routes/tasks_{id}_GET.js',
     'src/routes/tasks_{id}_DELETE.js',
     'src/routes/tasks_{id}_PUT.js',
   ],
