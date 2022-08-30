@@ -30,5 +30,12 @@ app.use('/api', require('./routes/tasks_{id}_DELETE'));
 app.use('/api', require('./routes/tasks_{id}_PUT'));
 
 app.listen(appSettings.APP__PORT, function () {
-  console.log(`Server: ${appSettings.APP__HOST}:${appSettings.APP__PORT}`);
+  console.log(
+    `
+= = = = = = = =
+  Server: ${appSettings.APP__HOST}:${appSettings.APP__PORT}/api/swagger
+  Docker: http://localhost/api/swagger
+= = = = = = = =
+    `
+  );
 });
