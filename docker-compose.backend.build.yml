@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 services:
   db:
@@ -11,16 +11,18 @@ services:
       MYSQL_PASSWORD: ${SEQUELIZE__PASSWORD}
       MYSQL_ROOT_PASSWORD: ${DATABASE__ROOT_PASSWORD}
     volumes:
-      - ./docker/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
-      - ./docker/etc/mysql/conf.d:/etc/mysql/conf.d
-      - ./docker/var/lib/mysql:/var/lib/mysql
+      - ./docker/db/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+      - ./docker/db/etc/mysql/conf.d:/etc/mysql/conf.d
+      - ./docker/db/var/lib/mysql:/var/lib/mysql
 
   backend:
-    image: pavelinnokentevichgalanin/6sem-practice-backend
+    build:
+      dockerfile: Dockerfile.backend
     ports:
       - 80:5000
     environment:
       SEQUELIZE__HOST: db
     volumes:
-      - ./.env:/app/.env
+      - ./backend/.env:/app/.env
+      - ./docker.backend.run.sh:/app/docker.backend.run.sh
     command: sh docker.backend.run.sh
