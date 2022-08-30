@@ -17,7 +17,6 @@ jobs:
       - name: docker build and docker push
         uses: docker/build-push-action@v3.0.0
         with:
-          directory: backend
-          dockerfile: Dockerfile
+          dockerfile: ./backend/Dockerfile
           tags: pavelinnokentevichgalanin/6sem-practice-backend:latest
           push: true
