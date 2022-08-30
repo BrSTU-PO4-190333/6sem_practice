@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  frontend:
+    image: pavelinnokentevichgalanin/6sem-practice-frontend
+    ports:
+      - 80:80

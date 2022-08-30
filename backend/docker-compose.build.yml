@@ -14,3 +14,13 @@ services:
       - ./docker/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
       - ./docker/etc/mysql/conf.d:/etc/mysql/conf.d
       - ./docker/var/lib/mysql:/var/lib/mysql
+
+  backend:
+    build: .
+    ports:
+      - 80:5000
+    environment:
+      SEQUELIZE__HOST: db
+    volumes:
+      - ./.env:/app/.env
+    command: sh docker.backend.run.sh
