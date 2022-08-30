@@ -20,3 +20,6 @@ jobs:
           file: Dockerfile.frontend
           tags: pavelinnokentevichgalanin/6sem-practice-frontend:latest
           push: true
+          build-args: |
+            REACT_APP__USE_HASH_ROUTER=false
+            REACT_APP__URL_BACKEND_SERVER=${{ secrets.REACT_APP__URL_BACKEND_SERVER }}
