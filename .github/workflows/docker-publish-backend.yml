@@ -2,7 +2,7 @@ name: Deploy to Docker Hub
 
 on:
   push:
-    branches: ["dev"]
+    branches: ["2022-08-30-14-55"]
 
 jobs:
   docker-publish:
@@ -17,6 +17,7 @@ jobs:
       - name: docker build and docker push
         uses: docker/build-push-action@v3.0.0
         with:
-          file: backend/Dockerfile
+          context: ./backend
+          file: ./backend/Dockerfile
           tags: pavelinnokentevichgalanin/6sem-practice-backend:latest
           push: true
