@@ -4,6 +4,10 @@ COPY ./frontend/package.json /app/
 COPY ./frontend/package-lock.json /app/
 RUN npm ci
 COPY ./frontend/ /app/
+ARG REACT_APP__USE_HASH_ROUTER
+ARG REACT_APP__URL_BACKEND_SERVER
+ENV REACT_APP__USE_HASH_ROUTER=${REACT_APP__USE_HASH_ROUTER}
+ENV REACT_APP__URL_BACKEND_SERVER=${REACT_APP__URL_BACKEND_SERVER}
 RUN npm run build
 
 FROM nginx:stable-alpine

@@ -16,13 +16,24 @@ services:
       - ./docker/db/var/lib/mysql:/var/lib/mysql
 
   backend:
-    build:
-      dockerfile: Dockerfile.backend
+    image: pavelinnokentevichgalanin/6sem-practice-backend
     ports:
-      - 80:5000
+      - 8001:5000
     environment:
       SEQUELIZE__HOST: db
     volumes:
-      - ./backend/.env:/app/.env
+      - ./.env:/app/.env
       - ./docker.backend.run.sh:/app/docker.backend.run.sh
     command: sh docker.backend.run.sh
+
+  frontend:
+    image: pavelinnokentevichgalanin/6sem-practice-frontend
+    ports:
+      - 8002:80
+
+  nginx:
+    image: nginx:stable-alpine
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - 80:80
