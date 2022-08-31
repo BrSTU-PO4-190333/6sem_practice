@@ -1,5 +1,5 @@
 # = = = = = = = = Production
-prod:
+prod-start:
 	docker pull pavelinnokentevichgalanin/6sem-practice-backend
 	docker pull pavelinnokentevichgalanin/6sem-practice-frontend
 	cd prod && docker-compose up
@@ -21,3 +21,21 @@ front:
 
 back:
 	npm run start:dev --prefix backend
+
+# = = = = = = = = drawio to pdf
+
+drawio:
+	docker-compose -f docker-compose.drawio.yml up
+	docker-compose -f docker-compose.drawio.yml down
+
+drawio-down:
+	docker-compose -f docker-compose.drawio.yml down
+
+# = = = = = = = = tex to pdf
+
+tex:
+	docker-compose -f docker-compose.texlive.yml up
+	docker-compose -f docker-compose.texlive.yml down
+
+tex-down:
+	docker-compose -f docker-compose.texlive.yml down

@@ -1,0 +1,58 @@
+\documentclass[
+  12pt, % Устанавливает размер шрифта документа (12pt, 14pt)
+  a4paper, % Лист А4
+  simple, % Тоже самое что nocolumnsxix, nocolumnxxxi и nocolumnxxxii
+  floatsection % Счётчик рисунков обнуляется каждую главу и нумеруется с номером главы, например, Рисунок 2.1
+]{eskdtext}
+
+\usepackage{config/env}
+\usepackage{config/env.practice}
+\usepackage{styles/listing}
+\usepackage{styles/lists}
+\usepackage{styles/SectionMargins}
+\usepackage{styles/table}
+\usepackage{styles/TableOfContent}
+\usepackage{styles/url}
+\usepackage{styles/fancyStyleWithCodeOnTop}
+\usepackage{styles/bibliography}
+
+\def \envCode {ОТП.\envPracticeStudentGroupName\envPracticeStudentGroupNumber.\envPracticeStudentCard-\envPracticeNumber~81~\envPracticeVersion}
+
+\ESKDletter{О}{Т}{П}
+\ESKDcolumnI {\ESKDfontIII ОТЧЁТ ТЕХНОЛОГИЧЕСКОЙ ПРАКТИКИ} % наименование изделия/документа
+\ESKDsignature {\envCode} % обозначение документа
+\ESKDcolumnIX {\ESKDfontIII \envPracticeEnterprice, УО <<БрГТУ>>} % наименование или различительный индекс предприятия
+\ESKDcolumnXIfI {\envPracticeStudentSurname} % Разраб.
+\ESKDcolumnXIfII {\envPracticeUniversityHeadPracticeSurname} % Пров.
+\ESKDcolumnXIfIV {\envPracticeEnterpriseHeadPracticeSurname} % (пустая строка после Пров. и перед Н. контр.)
+\ESKDcolumnXIfV {} % Н. контр.
+\ESKDcolumnXIfVI {} % Утв.
+
+\begin{document}
+  \input{include/practice_title_page_pz.tex}
+
+  % = = = = = = = = = = = = = = = =
+  % \ESKDstyle{title}
+  % \thispagestyle{fancyStyleWithCodeOnTopFirstPage}
+  % \pagestyle{fancyStyleWithCodeOnTopFirstPage}
+
+  % = = = = = = = = = = = = = = = =
+  % Содержание
+  \newpage
+  \tocloftpagestyle{empty} % \tocloftpagestyle{fancyStyleWithCodeOnTopFirstPage}
+  \tableofcontents
+  \paragraph{ПРИЛОЖЕНИЕ А. ТЕКСТ ПРОГРАММЫ}
+  \paragraph{ПРИЛОЖЕНИЕ Б. СХЕМА ПРОГРАММЫ}
+  % = = = = = = = = = = = = = = = =
+
+  \include{include/practice_pz_0_introduction}
+  \include{include/practice_pz_1_instruction}
+  \include{include/practice_pz_2_organizational-chart}
+  \include{include/practice_pz_3_work}
+  \include{include/practice_pz_4_product}
+  \include{include/practice_pz_5_design}
+  \include{include/practice_pz_6_components}
+  \include{include/practice_pz_7_standarts}
+  \include{include/practice_pz_8_conclusion}
+  \include{include/practice_pz_9_literature}
+\end{document}
