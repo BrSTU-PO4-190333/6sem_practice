@@ -1,0 +1,23 @@
+\documentclass[12pt, a4paper, simple, twoside]{eskdtext}
+
+\usepackage{config/env}
+\usepackage{config/env.practice}
+\usepackage{styles/listing}
+
+\def \envPracticeDiskSize {\underline{\hspace{1.4cm}} / 700.00 МБ}
+\def \envPracticePrilLetter {А}
+
+\begin{document}
+  \input{include/practice_title_page_disk.tex}
+
+  \ESKDstyle{title}
+
+  \newpage
+  \subparagraph{Оптический носитель CD-R:}
+
+  \newpage
+  \subparagraph{Содержание} \hspace{0pt}
+
+  \lstinputlisting[name=Структура проекта]
+  {../README.tree.txt}
+\end{document}

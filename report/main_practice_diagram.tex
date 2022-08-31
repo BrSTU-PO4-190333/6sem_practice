@@ -1,0 +1,123 @@
+\documentclass[12pt, a4paper, simple]{eskdtext}
+
+\usepackage{config/env}
+\usepackage{config/env.practice}
+\usepackage{styles/fancyStyleWithCodeOnTop}
+
+\def \envPracticePrilLetter {Б}
+\def \envCode {ОТП.\envPracticeStudentGroupName\envPracticeStudentGroupNumber.\envPracticeStudentCard-\envPracticeNumber~90~\envPracticeVersion}
+
+\begin{document}
+  \input{include/practice_title_page_diagram.tex}
+
+  \ESKDstyle{title}
+  \thispagestyle{fancyStyleWithCodeOnTopFirstPage}
+  \pagestyle{fancyStyleWithCodeOnTop}
+
+  \begin{figure}[!ph]
+    \centering
+  
+    \includegraphics[]
+    {../frontend/src/package/DateController/toStringTime/export/toStringTime-Page-1.pdf}
+  \end{figure}
+
+  \begin{figure}[!ph]
+    \centering
+    \begin{minipage}{0.49\textwidth}
+      \centering
+
+      \includegraphics[]
+      {../frontend/src/package/DateController/getStringDay/export/getStringDay-Page-1.pdf}
+    \end{minipage}
+    \begin{minipage}{0.49\textwidth}
+      \centering
+
+      \includegraphics[]
+      {../frontend/src/package/DateController/getStringMonth/export/getStringMonth-Page-1.pdf}
+    \end{minipage}
+  \end{figure}
+
+  \begin{figure}[!ph]
+    \centering
+    \begin{minipage}{0.49\textwidth}
+      \centering
+
+      \includegraphics[]
+      {../frontend/src/package/DateController/getPrevYear/export/getPrevYear-Page-1.pdf}
+    \end{minipage}
+    \begin{minipage}{0.49\textwidth}
+      \centering
+
+      \includegraphics[width=0.99\textwidth]
+      {../frontend/src/package/DateController/getNextYear/export/getNextYear-Page-1.pdf}
+    \end{minipage}
+  \end{figure}
+
+  \begin{figure}[!ph]
+    \centering
+    \begin{minipage}{0.49\textwidth}
+      \centering
+
+      \includegraphics[width=0.99\textwidth]
+      {../frontend/src/package/DateController/getPrevMonth/export/getPrevMonth-Page-1.pdf}
+    \end{minipage}
+    \begin{minipage}{0.49\textwidth}
+      \centering
+
+      \includegraphics[width=0.99\textwidth]
+      {../frontend/src/package/DateController/getNextMonth/export/getNextMonth-Page-1.pdf}
+    \end{minipage}
+  \end{figure}
+
+  \begin{figure}[!ph]
+    \centering
+    \begin{minipage}{0.49\textwidth}
+      \centering
+
+      \includegraphics[width=0.99\textwidth]
+      {../frontend/src/package/DateController/getPrevDate/export/getPrevDate-Page-1.pdf}
+    \end{minipage}
+    \begin{minipage}{0.49\textwidth}
+      \centering
+
+      \includegraphics[width=0.99\textwidth]
+      {../frontend/src/package/DateController/getNextDate/export/getNextDate-Page-1.pdf}
+    \end{minipage}
+  \end{figure}
+
+  \begin{figure}[!ph]
+    \centering
+  
+    \includegraphics[width=18cm]
+    {../frontend/src/package/DateController/toStringDate/export/toStringDate-Page-1.pdf}
+  \end{figure}
+
+  \begin{figure}[!ph]
+    \centering
+  
+    \includegraphics[]
+    {../frontend/src/scripts/CalendarController/getDateTasks/export/getDateTasks-Page-1.pdf}
+  \end{figure}
+
+  \begin{figure}[!ph]
+    \centering
+  
+    \includegraphics[]
+    {../frontend/src/package/DateController/getMonthDays/export/getMonthDays-Page-1.pdf}
+  \end{figure}
+
+  \begin{figure}[!ph]
+    \centering
+  
+    \includegraphics[]
+    {../frontend/src/package/DateController/getMonthDays/export/getMonthDays-Page-2.pdf}
+  \end{figure}
+
+  \begin{figure}[!ph]
+    \centering
+  
+    \includegraphics[width=18cm]
+    {../frontend/src/scripts/CalendarController/getMonthTasks/export/getMonthTasks-Page-1.pdf}
+  \end{figure}
+
+\end{document}
