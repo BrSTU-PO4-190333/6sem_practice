@@ -12,7 +12,6 @@
 |-- README.md
 |-- README.tree.txt
 |-- backend
-|   |-- .env
 |   |-- .env.example
 |   |-- .gitignore
 |   |-- .prettierignore
@@ -91,7 +90,6 @@
 |-- docker.frontend.nginx.default.conf
 |-- frontend
 |   |-- .browserslistrc
-|   |-- .env
 |   |-- .env.example
 |   |-- .eslintrc.js
 |   |-- .gitignore
@@ -224,7 +222,6 @@
 |                   |-- tasks_{id}_get.js
 |                   `-- tasks_{id}_put.js
 |-- prod
-|   |-- .env
 |   |-- .env.example
 |   |-- .gitignore
 |   |-- docker-compose.yml
@@ -265,10 +262,10 @@
     |   |-- practice_title_page_disk.tex
     |   |-- practice_title_page_pz.tex
     |   `-- practice_title_page_text.tex
-    |-- main_practice_PZ.tex
-    |-- main_practice_diagram.tex
-    |-- main_practice_disk.tex
-    |-- main_practice_text.tex
+    |-- main.tex
+    |-- main_practice_1_pz.tex
+    |-- main_practice_2_a.tex
+    |-- main_practice_3_b.tex
     `-- styles
         |-- SectionMargins.sty
         |-- TableOfContent.sty
@@ -279,4 +276,4 @@
         |-- table.sty
         `-- url.sty
 
-65 directories, 214 files
+65 directories, 211 files
